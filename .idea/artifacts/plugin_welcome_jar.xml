@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="plugin_welcome:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/plugin_welcome_jar</output-path>
+    <root id="archive" name="plugin_welcome.jar">
+      <element id="module-output" name="tron-challenge" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/plugin.yml" />
+    </root>
+  </artifact>
+</component>

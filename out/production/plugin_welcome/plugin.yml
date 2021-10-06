@@ -1,0 +1,3 @@
+main: welcomeplugin.WelcomePlugin
+name: Willkommen
+version: 1
