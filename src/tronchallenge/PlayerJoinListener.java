@@ -15,12 +15,12 @@ public class PlayerJoinListener implements Listener {
 
         if (colorNum < 8) {
             if (TronChallenge.tronChallenge.getPlayerLifeHashMap().containsKey(event.getPlayer().getUniqueId())) {
-                Bukkit.broadcastMessage("Verpiss dich wieder! Du warst schon einmal hier");
+                Bukkit.broadcastMessage("Du warst schon einmal hier");
             } else {
                 TronChallenge.tronChallenge.addPlayerLifeHashMap(event.getPlayer().getUniqueId(), 3);
             }
             if (TronChallenge.tronChallenge.getPlayerColorHashMap().containsKey(event.getPlayer().getUniqueId())) {
-                Bukkit.broadcastMessage("Verpiss dich wieder! Du warst schon einmal hier");
+                Bukkit.broadcastMessage("Du warst schon einmal hier");
             } else {
                 TronChallenge.tronChallenge.addPlayerColorHashMap(event.getPlayer().getUniqueId(), colorNum++);
             }

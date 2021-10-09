@@ -39,6 +39,10 @@ public class TronChallenge extends JavaPlugin {
         return playerLifeHashMap;
     }
 
+    public int getSpezColorNum(UUID key){
+        return playerColorHashMap.get(key);
+    }
+
     public void addPlayerLifeHashMap(UUID key, int num) {
         playerLifeHashMap.put(key, num);
     }
