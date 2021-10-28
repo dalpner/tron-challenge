@@ -4,7 +4,7 @@ import org.bukkit.Material;
 
 public class Colornames {
 
-    public Material getColor(int colorNum) {
+    public static Material getColor(int colorNum) {
         switch (colorNum) {
             case 0:
                 return Material.RED_WOOL;

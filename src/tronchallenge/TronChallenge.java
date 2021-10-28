@@ -1,16 +1,18 @@
 package tronchallenge;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 public class TronChallenge extends JavaPlugin {
 
-    private final HashMap<UUID, Integer> playerLifeHashMap = new HashMap<>();
-    private final HashMap<UUID, Integer> playerColorHashMap = new HashMap<>();
+    private final Map<UUID, Integer> playerLifeHashMap = new HashMap<>();
+    private final Map<UUID, Material> playerColorHashMap = new HashMap<>();
 
     public static TronChallenge tronChallenge;
 
@@ -27,19 +29,20 @@ public class TronChallenge extends JavaPlugin {
         System.out.println("Shutting down...");
     }
 
-    public HashMap<UUID, Integer> getPlayerColorHashMap() {
+    public Map<UUID, Material> getPlayerColorHashMap() {
         return playerColorHashMap;
     }
 
     public void addPlayerColorHashMap(UUID key, int num) {
-        playerColorHashMap.put(key, num);
+        Material material = Colornames.getColor(num);
+        playerColorHashMap.put(key, material);
     }
 
-    public HashMap<UUID, Integer> getPlayerLifeHashMap() {
+    public Map<UUID, Integer> getPlayerLifeHashMap() {
         return playerLifeHashMap;
     }
 
-    public int getSpezColorNum(UUID key){
+    public Material getSpezColorNum(UUID key){
         return playerColorHashMap.get(key);
     }
 
