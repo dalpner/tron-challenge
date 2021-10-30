@@ -11,6 +11,11 @@ import java.util.UUID;
 
 public class TronChallenge extends JavaPlugin {
 
+    // Serverip
+    // 192.168.178.35
+
+
+
     private final Map<UUID, Integer> playerLifeHashMap = new HashMap<>();
     private final Map<UUID, Material> playerColorHashMap = new HashMap<>();
 
@@ -26,7 +31,7 @@ public class TronChallenge extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        System.out.println("Shutting down...");
+        System.out.println("Shutting down tron-plugin.");
     }
 
     public Map<UUID, Material> getPlayerColorHashMap() {

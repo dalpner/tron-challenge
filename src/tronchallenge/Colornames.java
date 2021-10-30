@@ -1,6 +1,8 @@
 package tronchallenge;
 
 import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
 
 public class Colornames {
 
@@ -29,5 +31,16 @@ public class Colornames {
             default:
                 return Material.OBSIDIAN;
         }
+    }
+
+    public static boolean standOnColor(Player player, Block block){
+        for (int i = 0; i<9; i++){
+            if (block.getType() == getColor(i) && block.getType() != TronChallenge.tronChallenge.getPlayerColorHashMap().get(player.getUniqueId())){
+                return true;
+            }else{
+                continue;
+            }
+        }
+        return false;
     }
 }
