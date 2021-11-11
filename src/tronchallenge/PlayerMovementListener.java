@@ -33,6 +33,7 @@ public class PlayerMovementListener implements Listener {
                 w.getBlockAt(block.getLocation()).setType(TronChallenge.tronChallenge.getSpezColorNum(player.getUniqueId()));
             }
         } else {
+            //TODO Wenn keine Leben mehr, dann nicht dauert abgefragt.
             player.setGameMode(GameMode.SPECTATOR);
             event.getPlayer().sendMessage("Du hast leider keine Leben mehr. Ab jetzt heißt es zuschauen!");
         }

@@ -14,8 +14,6 @@ public class TronChallenge extends JavaPlugin {
     // Serverip
     // 192.168.178.35
 
-
-
     private final Map<UUID, Integer> playerLifeHashMap = new HashMap<>();
     private final Map<UUID, Material> playerColorHashMap = new HashMap<>();
 
